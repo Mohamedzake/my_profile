@@ -448,6 +448,21 @@ a:hover {
 
   color: #343a40;
 }
+.service {
+  position: relative;
+}
+.serviceIcon {
+  z-index: 1000;
+  position: absolute;
+  top: -3%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+
+  width: 50px;
+  height: 50px;
+  stroke: #ff6b6b;
+}
 .services .container {
   margin: 0 auto;
   width: 1450px;
@@ -479,6 +494,7 @@ a:hover {
 .servicesCom h3 {
   /* color: #f85c70; */
   margin-bottom: 1rem;
+  margin-top: 1.2rem;
 }
 .servicesCom h4 {
   font-size: 14px;
@@ -497,7 +513,7 @@ a:hover {
 .allservices {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
 }
 /* pricing */
 .pricing {
@@ -505,6 +521,7 @@ a:hover {
   background-color: #fff;
 
   color: #343a40;
+  margin-bottom: 4rem;
 }
 .pricing .container {
   margin: 0 auto;
@@ -544,10 +561,13 @@ a:hover {
   font-size: 20px;
 }
 .packsPricing {
+  height: 80vh;
   /* background-color: #f85c70; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  text-align: center;
   /* justify-content: space-evenly; */
 }
 .borderr {
@@ -574,18 +594,38 @@ a:hover {
   list-style: none;
   margin-bottom: 3rem;
 }
-/* .free {
-  width: 25%;
+.free {
+  /* height: 80vh; */
 }
 .basic {
-  width: 25%;
+  /* width: 25%; */
 }
 
 .pro {
-  width: 25%;
-} */
+  /* width: 25%; */
+}
 .exclusive {
-  width: 25%;
+  position: relative;
+  height: 85%;
+  /* width: 25%; */
+  overflow: hidden;
+}
+.exclusive::after {
+  content: "New";
+  color: #fff;
+  background-color: #f85c70;
+  font-size: 10px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 10px 3rem;
+  position: absolute;
+  top: 1%;
+  right: -12%;
+  text-transform: uppercase;
+  transform: rotate(45deg);
+}
+.exclusive span {
+  color: #f85c70;
 }
 /* stats-container2 */
 .stats-container2 {
@@ -780,6 +820,7 @@ textarea {
   background-color: #fff;
 
   color: #343a40;
+  margin-bottom: 4rem;
 }
 .portfolio .container {
   margin: 0 auto;
@@ -841,6 +882,7 @@ textarea {
   text-align: center;
   align-items: center;
   background-color: #e31363; */
+  /* text-decoration: none; */
 }
 .list ul {
   list-style: none;
@@ -854,6 +896,82 @@ textarea {
   border-bottom: 1px solid #6c757d;
   margin-bottom: 2rem;
 }
+.list ul a {
+  text-decoration: none;
+}
 .listd {
   background-color: red;
+}
+.contact-info .social-icons i {
+  stroke: #f85c70;
+  color: #f85c70;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+/* ////////////////// */
+
+.tab-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.tab-button.active {
+  background-color: #0056b3;
+}
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: flex;
+}
+/* ///////////////////////// */
+
+.project {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.project img {
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.overlayP {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(208, 79, 79, 0.7); /* Semi-transparent background */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease; /* Smooth fade-in effect */
+  padding: 20px;
+  text-align: center;
+  /* color: #333; */
+  font-size: 2rem;
+}
+.project:hover img {
+  transform: scale(1.1); /* Slightly zoom the image on hover */
+}
+.project:hover .overlayP {
+  opacity: 1; /* Show the overlay on hover */
+}
+.overlayP {
+  display: flex;
+  flex-direction: column;
+}
+.overlayP h5 {
+}
+.overlayP p {
+  color: #ddd;
+  font-size: 16px;
 }
