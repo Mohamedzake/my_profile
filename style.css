@@ -135,12 +135,13 @@ header .btnicon {
   gap: 3rem;
 }
 .section1 nav ul a:link,
-a:visited {
+.section1 nav ul a:visited {
   color: #333;
   text-decoration: none;
 }
+
 .section1 nav ul a:active,
-a:hover {
+.section1 nav ul a:hover {
   color: #f85c70;
 }
 .resume {
